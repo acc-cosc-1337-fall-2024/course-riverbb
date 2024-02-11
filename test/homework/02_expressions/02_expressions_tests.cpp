@@ -24,3 +24,4 @@ TEST_CASE("Test Get Tip Amount")
   REQUIRE(get_tip_amount(20, 20) == 4.0);
 }
 
+ 
