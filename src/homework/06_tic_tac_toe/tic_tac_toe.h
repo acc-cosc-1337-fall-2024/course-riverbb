@@ -14,6 +14,8 @@ public:
   void mark_board(int position);
   std::string get_player() const{return player;}
   void display_board() const;
+  //NEW//////////////////////////////////////////////////////////////
+  std::string get_winner() const{return winner;} //return private variable winner
 
 private:
   std::string player;
@@ -21,6 +23,11 @@ private:
   void clear_board();
   void set_next_player();
   bool check_board_full();
+  //NEW//////////////////////////////////////////////////////////////
+  bool check_column_win(); 
+  bool check_row_win(); 
+  bool check_diagonal_win(); 
+  void set_winner(); 
 
 };
 
