@@ -20,6 +20,7 @@ public:
 private:
   std::string player;
   std::vector<std::string> pegs{9, " "};
+  std::string winner;
   void clear_board();
   void set_next_player();
   bool check_board_full();
