@@ -13,9 +13,16 @@ int main()
 
   do
     {
-      cout << "enter first player: ";
-      cin >> first_player;
-
+      do
+        {
+          cout << "enter first player: ";
+          cin >> first_player;
+          if (first_player != "X" && first_player != "O")
+          {
+            cout << "invalid input :|\n";
+          }
+        }while (first_player != "X" && first_player != "O");
+      
       game.start_game(first_player);
 
       int position;
@@ -28,11 +35,20 @@ int main()
           game.display_board();
         }
 
+      if (game.get_winner() == "C")
+      {
+        cout << "it's a tie :0 \n";
+      }
+      else
+      {
+        cout << game.get_winner() << " wins! :D \n";
+      }
+
         cout << "play again? (y/n): ";
         cin >> user_choice;
 
       
-    }while(user_choice == 'y' || 'Y');
+    }while(user_choice == 'y' || user_choice == 'Y');
 
   return 0;
 }
