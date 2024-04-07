@@ -35,7 +35,7 @@ TEST_CASE("Test game over if 9 slots are selected.")
 
 //NEW//////////////////////////////////////////////////////////////
 
-TEST_CASE(Test first player set to X)
+TEST_CASE("Test first player set to X")
 {
   TicTacToe game;
   game.start_game("X");
